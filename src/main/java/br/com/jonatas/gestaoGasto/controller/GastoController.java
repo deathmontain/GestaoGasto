@@ -44,7 +44,7 @@ public class GastoController {
         return ResponseEntity.ok().build();
     }
 
-    //TODO permitir apenas USUARIO listar gastos
+    //TODO permitir apenas USUARIO listar gastos.
     @Cacheable("gastoUsuario")
     @GetMapping("user/gasto/{dataCriacao}")
     public Page<GastoDTO> filtro(HttpServletRequest request,
