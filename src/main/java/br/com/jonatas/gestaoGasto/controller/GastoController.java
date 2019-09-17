@@ -36,7 +36,7 @@ public class GastoController {
         return ResponseEntity.ok(GastoDTO.converter(gastos));
     }
 
-    //TODO permitir apenas SISTEMA lançar gasto
+    //TODO permitir apenas SISTEMA lançar gasto.
     @PutMapping("sistema/gasto")
     public ResponseEntity lancar(HttpServletRequest request, @RequestBody GastoForm form) {
         Gasto gasto = form.converter(servicoDeToken.getCodigo(AutenticacaoViaTokenFilter.recuperarToken(request)));
