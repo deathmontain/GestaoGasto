@@ -55,7 +55,7 @@ public class GastoController {
                 LocalDateTime.parse(dataCriacao, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")), paginacao));
     }
 
-    //TODO permitir apenas USUARIO categorizar gasto
+    //TODO permitir apenas USUARIO categorizar gasto.
     @PutMapping("user/gasto/categorizar")
     public ResponseEntity categorizar(@RequestBody Gasto gasto) {
         gastoService.categorizarGasto(gasto);
