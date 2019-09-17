@@ -28,7 +28,7 @@ public class GastoController {
     @Autowired
     private GastoService gastoService;
 
-    //TODO permitir apenas USUARIO listar gastos
+    //TODO permitir apenas USUARIO listar gastos.
     @GetMapping("user/gasto")
     public ResponseEntity<List<GastoDTO>> listar(HttpServletRequest request) {
         String codigoUsuario = servicoDeToken.getCodigo(AutenticacaoViaTokenFilter.recuperarToken(request));

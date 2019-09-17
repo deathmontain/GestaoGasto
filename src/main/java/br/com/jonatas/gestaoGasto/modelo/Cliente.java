@@ -87,7 +87,7 @@ public class Cliente implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(() -> "USUARIO");
     }
-    
+
     @Override
     public String getPassword() {
         return this.senha;
